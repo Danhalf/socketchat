@@ -8,6 +8,7 @@ const io = new Server(httpServer, {
 
 io.on("connection", (socket) => {
    // ...
+   console.log('connect on: ', socket.id)
    socket.emit('<h2>Hello</h2>')
 });
 
