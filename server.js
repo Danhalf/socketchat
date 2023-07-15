@@ -34,7 +34,7 @@ io.on("connect", (socket) => {
 
    socket.on('message', (message) => {
       console.log(`message via: ${socket.id}, ${message}`)
-      socket.emit('message', `${socket.id}: ${message}`)
+      socket.emit('message', `${socket.id}: ${message}`);
    })
 
    socket.emit('date', new Date().toDateString());

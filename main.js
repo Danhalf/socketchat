@@ -14,6 +14,9 @@ btn.addEventListener('click', (e) => {
 
 socket.on('date', (date) => {
    console.log('date: ', date);
+   document.querySelector('.date').textContent = date;
+   input.value = '';
+
 });
 
 socket.on('message', (msg) => {
